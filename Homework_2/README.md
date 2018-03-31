@@ -30,7 +30,7 @@ def scanner(path):
     files =  files[1:]
 
     '''
-    因为我使用来git，所以读出的文件中会有一个 .DS_Store 文件
+    macOS下会有一个布局相关文件，所以读出的文件中会有一个 .DS_Store 文件
     所以用 file[1:] 将该文件去掉
     如果运行结果没有 .DS_Store 文件的话，可以考虑删掉该行代码
     '''
