@@ -1,0 +1,6 @@
+0	./inverted/math1.txt
+1	./inverted/math3.txt
+2	./inverted/math2.txt
+3	./inverted/sports3.txt
+4	./inverted/sports2.txt
+5	./inverted/sports1.txt
