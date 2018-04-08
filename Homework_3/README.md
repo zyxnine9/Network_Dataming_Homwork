@@ -16,9 +16,9 @@ __doc_index2path 是一个 index -> path 的字典<br>
 
 __word2index  是一个 word -> file index 的字典<br>
 
-<h4>\__init\_\_  :</h4>
+<h4>__init__  :</h4>
 
-<p>初始化 \_\_doc_index2path 和 __word2index(将文件中的内容读入程序中存放)</p>
+<p>初始化 __doc_index2path 和 __word2index(将文件中的内容读入程序中存放)</p>
 
 <h4>search_single_keyword :</h4>
 
@@ -77,7 +77,7 @@ def search_single_keyword(self, keyword):
         return return_list
 ```
 
-####__construct_query_tree
+#### __construct_query_tree
 
 ```python
     def __construct_query_tree(self, query):
