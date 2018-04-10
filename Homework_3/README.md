@@ -63,6 +63,9 @@ class Bool_search(object):
 
 ### 具体函数解释
 
+#### __init___
+初始化__doc_index_path和__word_index_path  
+
 #### search_single_keyword
 
 单个关键字用初始化好的 __word2index 直接查询
@@ -103,10 +106,10 @@ def search_single_keyword(self, keyword):
                 #left node
                 left_node = (temp_node_list.pop())
                 node.append(left_node)
-                """
-                左节点为 “and” 前的一个元素(关键字)，这个关键字已经被加到temp_node_list中去了
-                所以要将加进去的节点从temp_node_list删除
-                """
+                
+                #左节点为 “and” 前的一个元素(关键字)，这个关键字已经被加到temp_node_list中去了
+                #所以要将加进去的节点从temp_node_list删除
+                
                 
                 
                 #right node 
@@ -145,12 +148,12 @@ def search_single_keyword(self, keyword):
             or_node.append(current_node)
             last_node = or_node
             i += 1
-        """
-        temp_node_list中存放的是由
-        普通关键字组成的节点和由“and”组成的带左右子节点的节点
-        对每个节点，给他们添上一个“OR”
-        构成一颗查询树
-        """
+        
+        #temp_node_list中存放的是由
+        #普通关键字组成的节点和由“and”组成的带左右子节点的节点
+        #对每个节点，给他们添上一个“OR”
+        #构成一颗查询树
+        
         return last_node
 ```
 
