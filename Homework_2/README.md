@@ -39,7 +39,7 @@ def scanner(path):
     #申明一个数组储存文件路径
 
     for file in files:
-        pathes.append(path+file)
+        pathes.append(os.path.join(path,file))
         #储存文件路径
 
     return pathes
