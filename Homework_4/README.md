@@ -4,13 +4,13 @@ In this week, we need to transform the documents and query to vector.<br>
 
 The same time, we  use tf-idf  to represent the weight in the vector.<br>
 
- This week, I don't follow the Mr.Wei's algorithm, I just use some python package.<br>
+ This week, I don't follow the Mr.Wei's tutorial, I just use some python packages.<br>
 
 ## Moduals
 
 this week, I use  ***scikit-learn***  to  calculate the _TF-IDF_ and the _cosine_<br>
 
-I'm not very sure what happen in those package, so I don't want to talk about them in details.<br>
+I'm not very sure what happens in this package, so I don't want to talk about it in details.<br>
 
 Whereas, let me just explain something in the program. 
 
@@ -43,24 +43,24 @@ class Vector_search(object):
         for file in files:
             with open(file,'r') as f:
                 self.__docs.append(f.read())
-        #把文件读入__docs中
+        #把.txt文件读入 __docs中
         
         
     def search_rank(self, query):
         tfidf = TfidfVectorizer(min_df=0, max_df=1.)
         
         docs = tfidf.fit_transform(self.__docs)
-        #用那6个.txt文件构建由tf-idf赋予权重的向量
+        #用那6个.txt文件构建6个由tf-idf赋予权重的向量
         
         query = tfidf.transform([query.lower()])
-        #将查询也转化成tf-idf相关的向量
+        #将查询也转化一个成tf-idf相关的向量
         
         cosine = cosine_similarity(query, docs)
-        #求余弦
+        #求query与6个document对应的余弦值,结果储存在变量'cosine'中
         
         result = cosine.argsort().tolist()[0]
         result.reverse()
-        #结果排序后，cos值由大到小，然后转化成list
+        #把cos值由大到小排序后，转化成一个list
         
         print("The search rank is {}".format(result))
         self.__print_result(result)
@@ -115,4 +115,3 @@ a.search_rank('sports news')
      path is ../data/math1.txt
     Mathematics is the study of quantity, structure, space, and change. Mathematicians seek out patterns,[2][3] formulate new conjectures, and establish truth by rigorous deduction from appropriately chosen axioms and definitions.[4]
     =======================================================================
-    

@@ -1,4 +1,7 @@
+<p align='center'><img src='./nine.png'/><img src='./cool.png' /><p>
+
 # Network_Dataming_Homwork
+
 SCU 网络数据挖掘作业
 
 > zyx
