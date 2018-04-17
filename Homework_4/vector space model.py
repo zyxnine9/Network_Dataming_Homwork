@@ -8,9 +8,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import os
 
-
 # In[2]:
-
 
 class Vector_search(object):
     __docs_path = '../data/'

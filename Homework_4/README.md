@@ -42,7 +42,7 @@ class Vector_search(object):
         files = self.__doc_index2path.values()
         for file in files:
             with open(file,'r') as f:
-                self.__docs.append(f.read())
+                self.__docs.append(f.read().lower())
         #把.txt文件读入 __docs中
         
         

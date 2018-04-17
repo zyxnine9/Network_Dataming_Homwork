@@ -1,4 +1,4 @@
-<p align='center'><img src='./nine.png'/><img src='./cool.png' /><p>
+<p align='center'><img src='./cool.png' /><p>
 
 # Network_Dataming_Homwork
 
